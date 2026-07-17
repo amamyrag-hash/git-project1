@@ -9,7 +9,7 @@ try{
     $result=$pdo->prepare("INSERT INTO users (name , username) values (:name , :username)");
     $result->execute(["name"=>"hossein",
     "username"=>"hossein23"]);
-    
+    $show=$result->fetchAll(PDO::FETCH_ASSOC);
 
 }catch(Exception $e){
     echo $e->getMessage();
