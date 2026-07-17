@@ -11,6 +11,7 @@ try{
     "username"=>"hossein23"]);
     $show=$result->fetchAll(PDO::FETCH_ASSOC);
 
+    $show=$result->fetch();
 }catch(Exception $e){
     echo $e->getMessage();
 }
